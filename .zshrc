@@ -6,8 +6,8 @@ umask 022
 #
 # Clean paths
 #
-export PATH=""
-export MANPATH=""
+#export PATH=""
+#export MANPATH=""
 ZSH_MYCONFDIR=~/.zsh
 #
 # Locale
