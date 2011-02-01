@@ -7,7 +7,11 @@ alias rm='nocorrect rm -v'
 alias mkdir='nocorrect mkdir'
 alias man='nocorrect man'
 alias find='noglob find'
-alias ls='ls -FG --color'
+if ['`uname -s` = 'FreeBSD']; then
+  alias ls='ls -FG'
+else
+  alias ls='ls -FG --color'
+fi
 alias ll='ls -l'
 alias la='ls -a'
 alias li='ls -ial'
