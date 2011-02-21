@@ -100,7 +100,7 @@ source $ZSH_MYCONFDIR/completion.zsh
 source $ZSH_MYCONFDIR/keybind.zsh
 
 export PKG_MANAGER=none
-for i in {port,fink,brew};do
+for i in {port,fink,brew,apt-get};do
     `which $i > /dev/null` && export PKG_MANAGER=$i
 done
 
@@ -119,6 +119,6 @@ fi
 # vim: set noet ts=4 tw=80 :
 
 
-if ['`lsb_release -is` = 'Ubuntu']; then
+if [`which ubuntu-server-tip > /dev/null`]; then
   ubuntu-server-tip
 fi
