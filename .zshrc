@@ -118,4 +118,7 @@ fi
 
 # vim: set noet ts=4 tw=80 :
 
-ubuntu-server-tip
+
+if ['`lsb_release -is` = 'Ubuntu']; then
+  ubuntu-server-tip
+fi
