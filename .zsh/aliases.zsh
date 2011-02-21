@@ -51,7 +51,6 @@ alias hmakej='hilite make -j'
 alias clean='rm *~'
 alias emacs='emacs -nw'
 alias grep='grep --color=auto'
-alias sys-update 'sudo apt-get update&&sudo apt-get -y upgrade&&sudo apt-get -y autoclean&&sudo apt-get -y autoremove'
 
 # Git
 alias gst='git status'
@@ -79,5 +78,7 @@ if [ -d $ZSH_MYCONFDIR/aliases.d/ ]; then
     brew)
         load_files $ZSH_MYCONFDIR/aliases.d/brew
         ;;
+    apt-get)
+        load_files $ZSH_MYCONFDIR/aliases.d/apt-get
     esac
 fi
