@@ -7,7 +7,7 @@ alias rm='nocorrect rm -v'
 alias mkdir='nocorrect mkdir'
 alias man='nocorrect man'
 alias find='noglob find'
-if ['`uname -s` = 'FreeBSD']; then
+if ['`uname -s`' = 'FreeBSD']; then
   alias ls='ls -FG'
 else
   alias ls='ls -FG --color'
@@ -44,12 +44,12 @@ alias -g N='2>/dev/null'
 alias v='vim'
 alias gv='gvim'
 alias d='dirs -v'
-alias ssync="rsync --rsh=ssh"
-alias ssyncr="rsync --rsh=ssh --recursive --verbose --progress"
-alias grab="sudo chown ${USER} --recursive"
-alias hmakej="hilite make -j"
-alias clean="rm *~"
-alias emacs="emacs -nw"
+alias ssync='rsync --rsh=ssh'
+alias ssyncr='rsync --rsh=ssh --recursive --verbose --progress'
+alias grab='sudo chown ${USER} --recursive'
+alias hmakej='hilite make -j'
+alias clean='rm *~'
+alias emacs='emacs -nw'
 alias grep='grep --color=auto'
 alias sys-update 'sudo apt-get update&&sudo apt-get -y upgrade&&sudo apt-get -y autoclean&&sudo apt-get -y autoremove'
 
