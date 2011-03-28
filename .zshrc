@@ -119,6 +119,6 @@ fi
 # vim: set noet ts=4 tw=80 :
 
 
-if [`which ubuntu-server-tip > /dev/null`]; then
+if command -v ubuntu-server-tip &>/dev/null; then
   ubuntu-server-tip
 fi
