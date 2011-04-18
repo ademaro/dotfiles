@@ -191,3 +191,10 @@ function read_path_dir () {
 	echo $NEWPATH
 }
 
+gdict () (
+# http://code.google.com/p/dict-lookup-chrome-ext/source/browse/trunk/extension/lookup.js
+# http://www.google.com/dictionary?langpair=en|ru&q=chemist&hl=ru&aq=f
+# http://www.zsh.org/mla/users/2006/msg00063.html 
+#
+         GET "http://www.google.com/dictionary?langpair=en|ru&q=$1&hl=ru&aq=f" | grep dct-tt | sed /'class=\"dct-e/d' | sed '/<a\ href/d' | sed 's/<span class="dct-tt">//g' |sed 's/<\/span>//' | sed '/<span /d' | head -n 3
+)
