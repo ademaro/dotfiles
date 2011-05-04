@@ -84,6 +84,11 @@ export PAGER=less
 
 export UNAME_S=$(uname -s 2>&1 || echo "Linux" )
 
+export PKG_MANAGER=none
+for i in {port,fink,brew,apt-get};do
+    `which $i > /dev/null` && export PKG_MANAGER=$i
+done
+
 #
 # Load aliases
 #
@@ -98,11 +103,6 @@ source $ZSH_MYCONFDIR/completion.zsh
 # Load binds
 #
 source $ZSH_MYCONFDIR/keybind.zsh
-
-export PKG_MANAGER=none
-for i in {port,fink,brew,apt-get};do
-    `which $i > /dev/null` && export PKG_MANAGER=$i
-done
 
 #
 # Load prompt
