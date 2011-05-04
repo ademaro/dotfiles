@@ -83,5 +83,6 @@ if [ -d $ZSH_MYCONFDIR/aliases.d/ ]; then
         ;;
     apt-get)
         load_files $ZSH_MYCONFDIR/aliases.d/apt-get
+        ;;
     esac
 fi
