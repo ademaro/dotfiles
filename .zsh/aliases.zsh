@@ -53,7 +53,7 @@ alias grab='sudo chown ${USER} --recursive'
 alias hmakej='hilite make -j'
 alias clean='rm *~'
 alias emacs='emacs -nw'
-alias grep='grep --color=auto'
+alias grep='grep --color=auto --binary-files=without-match'
 
 # Git
 alias gst='git status'
