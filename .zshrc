@@ -119,6 +119,9 @@ fi
 # vim: set noet ts=4 tw=80 :
 
 
-if command -v ubuntu-server-tip &>/dev/null; then
+if which ubuntu-server-tip &>/dev/null; then
   ubuntu-server-tip
+elif which fortune &>/dev/null; then
+  fortune -a bofh-excuses futurama
 fi
+echo -ne "\n";
