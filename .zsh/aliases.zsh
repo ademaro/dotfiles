@@ -15,7 +15,7 @@ case `uname` in
     alias ls='ls -F --color=auto'
     ;;
 esac
-alias ll='ls -l'
+alias ll='ls -la'
 alias la='ls -a'
 alias li='ls -ial'
 alias lsd='ls -ld *(-/DN)'
