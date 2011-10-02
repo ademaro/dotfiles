@@ -1,3 +1,4 @@
+#!/usr/bin/zsh
 if [ -d ~/.zsh ]
 then
   echo "\033[0;33mКонфиг zsh уже установлен.\033[0m Удалите ~/.zsh для продолжения установки."
@@ -11,4 +12,8 @@ then
 fi
 
 echo "\033[0;34mКлонирование конфигов Zsh и Vim...\033[0m"
-/usr/bin/env git clone https://github.com/ademaro/dotviles.git ~/.
+/usr/bin/env git clone https://github.com/ademaro/dotviles.git /tmp/dotfiles
+mv /tmp/dotfiles/.zsh* ~/
+mv /tmp/dotfiles/.vim* ~/
+
+rm -rf /tmp/dotfiles
