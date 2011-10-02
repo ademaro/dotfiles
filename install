@@ -12,7 +12,7 @@ then
 fi
 
 echo "\033[0;34mКлонирование конфигов Zsh и Vim...\033[0m"
-/usr/bin/env git clone https://github.com/ademaro/dotviles.git /tmp/dotfiles
+/usr/bin/env git clone https://github.com/ademaro/dotfiles.git /tmp/dotfiles
 mv /tmp/dotfiles/.zsh* ~/
 mv /tmp/dotfiles/.vim* ~/
 
