@@ -1,4 +1,5 @@
 # Hosts to use for completion (see later zstyle)
+unset _myhosts
 local _myhosts
 if [[ -f $HOME/.ssh/known_hosts ]]; then
     _myhosts=( ${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*} )
