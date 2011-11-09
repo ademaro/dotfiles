@@ -11,7 +11,7 @@ then
   exit
 fi
 
-echo -e "\e[1;31mКлонирование конфигов Zsh и Vim...\e[0m"
+echo -e "\e[1;32mКлонирование конфигов Zsh и Vim...\e[0m"
 /usr/bin/env git clone https://github.com/ademaro/dotfiles.git /tmp/dotfiles
 mv /tmp/dotfiles/.zsh* ~/
 mv /tmp/dotfiles/.vim* ~/
