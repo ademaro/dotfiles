@@ -124,4 +124,5 @@ if which ubuntu-server-tip &>/dev/null; then
 elif which fortune &>/dev/null; then
   fortune -a bofh-excuses futurama
 fi
+echo -e `curl -s  http://fucking-great-advice.ru/api/random | awk -F \" '{print $8}'` |sed 's/\&nbsp;/ /g'
 echo -ne "\n";
