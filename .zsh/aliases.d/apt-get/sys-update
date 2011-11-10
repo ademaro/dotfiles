@@ -1,1 +1,5 @@
-alias sys-update='sudo apt-get update&&sudo apt-get -y upgrade&&sudo apt-get -y autoclean&&sudo apt-get -y autoremove'
+if [ `whoami` = "root" ]; then
+  alias sys-update='apt-get update&&apt-get -y upgrade&&apt-get -y autoclean&&apt-get -y autoremove'
+else
+  alias sys-update='sudo apt-get update&&sudo apt-get -y upgrade&&sudo apt-get -y autoclean&&sudo apt-get -y autoremove'
+fi
