@@ -57,7 +57,7 @@ alias grep='grep --color=auto --binary-files=without-match'
 
 # Git
 alias gst='git status -sb'
-alias gil='git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative'
+alias gil='git log --graph --pretty=format:"%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset" --abbrev-commit --date=relative'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git pull && git push'
