@@ -55,6 +55,8 @@ alias clean='rm *~'
 alias emacs='emacs -nw'
 alias grep='grep --color=auto --binary-files=without-match'
 
+alias myip='curl check-host.net/ip'
+
 # Git
 alias gst='git status -sb'
 alias gil='git log --graph --pretty=format:"%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset" --abbrev-commit --date=relative'
