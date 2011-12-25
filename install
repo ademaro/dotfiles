@@ -12,6 +12,7 @@ then
 fi
 
 echo "$(tput setaf 2)Клонирование конфигов Zsh и Vim...$(tput sgr0)"
+
 /usr/bin/env git clone https://github.com/ademaro/dotfiles.git /tmp/dotfiles
 mv /tmp/dotfiles/.zsh* ~/
 mv /tmp/dotfiles/.vim* ~/

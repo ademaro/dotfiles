@@ -1,0 +1,27 @@
+#!/bin/sh
+if [ -d ~/.zsh ]
+then
+  echo "$(tput setaf 2)Бекапим конфиг zsh.$(tput sgr0)"
+  mv ~/.zsh /tmp
+  mv ~/.zshcr /tmp
+  echo "$(tput setaf 2)Готово!$(tput sgr0)"
+fi
+
+if [ -d ~/.vim ]
+then
+  echo "$(tput setaf 2)Бекапим конфиг vim.$(tput sgr0)"
+  mv ~/.vim /tmp
+  mv ~/.vimrc /tmp
+  echo "$(tput setaf 2)Готово!$(tput sgr0)"
+ exit
+fi
+
+echo "$(tput setaf 2)Клонирование конфигов Zsh и Vim...$(tput sgr0)"
+
+/usr/bin/env git clone https://github.com/ademaro/dotfiles.git /tmp/dotfiles
+mv /tmp/dotfiles/.zsh* ~/
+mv /tmp/dotfiles/.vim* ~/
+
+rm -rf /tmp/dotfiles
+echo "$(tput setaf 2)Обновлние произошло успешно!$(tput sgr0)"
+ 
