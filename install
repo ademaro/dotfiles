@@ -1,17 +1,17 @@
-#!/usr/bin/zsh
+#!/bin/sh
 if [ -d ~/.zsh ]
 then
-  echo -e "\e[1;31mКонфиг zsh уже установлен.\e[0m \e[0;31mУдалите ~/.zsh для продолжения установки.\e[0m"
+  echo -e "$(tput setaf 1)Конфиг zsh уже установлен.$(tput sgr0) Удалите ~/.zsh для продолжения установки."
   exit
 fi
 
 if [ -d ~/.vim ]
 then
-  echo -e "\e[1;31mКонфиг vim уже установлен.\e[0m \e[0;31mУдалите ~/.vim для продолжения установки.\e[0m"
+  echo -e "$(tput setaf 1)Конфиг vim уже установлен.$(tput sgr0) Удалите ~/.vim для продолжения установки."
   exit
 fi
 
-echo -e "\e[1;32mКлонирование конфигов Zsh и Vim...\e[0m"
+echo -e "$(tput setaf 2)Клонирование конфигов Zsh и Vim...$(tput sgr0)"
 /usr/bin/env git clone https://github.com/ademaro/dotfiles.git /tmp/dotfiles
 mv /tmp/dotfiles/.zsh* ~/
 mv /tmp/dotfiles/.vim* ~/
