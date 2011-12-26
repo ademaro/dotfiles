@@ -3,7 +3,7 @@ if [ -d ~/.zsh ]
 then
   echo "$(tput setaf 2)Бекапим конфиг zsh.$(tput sgr0)"
   mv ~/.zsh /tmp
-  mv ~/.zshcr /tmp
+  mv ~/.zshrc /tmp
   echo "$(tput setaf 2)Готово!$(tput sgr0)"
 fi
 
