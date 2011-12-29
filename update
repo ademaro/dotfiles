@@ -13,7 +13,6 @@ then
   mv ~/.vim /tmp
   mv ~/.vimrc /tmp
   echo "$(tput setaf 2)Готово!$(tput sgr0)"
- exit
 fi
 
 echo "$(tput setaf 2)Клонирование конфигов Zsh и Vim...$(tput sgr0)"
