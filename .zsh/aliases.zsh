@@ -73,6 +73,10 @@ if which pastebinit &>/dev/null; then
   alias out='pastebinit -b http://paste.ubuntu.com -a ademaro'
 fi
 
+if which ack-grep
+  alias grep='ack-grep'
+fi
+
 #
 # Read additional aliases
 #
