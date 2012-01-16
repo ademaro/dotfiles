@@ -77,6 +77,10 @@ if which ack-grep &>/dev/null; then
   alias grep='ack-grep'
 fi
 
+#check domains in ns
+alias dns1='dig @ns1.pixelon.ru +short'
+alias dns2='dig @ns2.pixelon.ru +short'
+
 #
 # Read additional aliases
 #
