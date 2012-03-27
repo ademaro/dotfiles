@@ -4,7 +4,8 @@
 alias mv='nocorrect mv -v'
 alias cp='nocorrect cp -v'
 alias rm='nocorrect rm -v'
-alias mkdir='nocorrect mkdir'
+alias mkdir='nocorrect mkdir -p'
+alias md='mkdir'
 alias man='nocorrect man'
 alias find='noglob find'
 case `uname` in
@@ -22,16 +23,12 @@ alias lsd='ls -ld *(-/DN)'
 alias lsa='ls -ld .*'
 alias du='du -h'
 alias df='df -h'
-alias x='startx'
-alias ps='ps'
-alias cal='cal'
 alias clr='find . -regex .*~ | xargs rm -f'
-alias mkinst='sudo make install'
+alias clean='rm *~'
 alias sc='less /usr/share/X11/rgb.txt'
 alias mnt='sudo mount'
 alias mntl='sudo mount -o loop'
 alias umnt='sudo umount'
-alias cfg='./configure --prefix=/usr --sysconfdir=/etc'
 alias u2d='perl -pi -e "s/\\n/\\r\\n/;"'
 alias d2u='perl -pi -e "s/\\r\\n/\\n/;"'
 alias slog='sudo tail -f /var/log/messages | ccze -A -p syslog'
@@ -50,12 +47,10 @@ alias d='dirs -v'
 alias ssync='rsync --rsh=ssh'
 alias ssyncr='rsync --rsh=ssh --recursive --verbose --progress'
 alias grab='sudo chown ${USER} --recursive'
-alias hmakej='hilite make -j'
-alias clean='rm *~'
-alias emacs='emacs -nw'
 alias grep='grep --color=auto --binary-files=without-match'
 
 alias myip='curl check-host.net/ip'
+alias whois="whois -h whois-servers.net"
 
 alias memrss='while read command percent rss; do if [[ "${command}" != "COMMAND" ]]; then rss="$(bc <<< "scale=2;${rss}/1024")"; fi; printf "%-26s%-8s%s\n" "${command}" "${percent}" "${rss}"; done < <(ps -A --sort -rss -o comm,pmem,rss | head -n 11)'
 
@@ -79,7 +74,7 @@ if which ack-grep &>/dev/null; then
   alias grep='ack-grep'
 fi
 
-#check domains in ns
+# Check domains in pix.NS
 alias dns1='dig @ns1.pixelon.ru +short'
 alias dns2='dig @ns2.pixelon.ru +short'
 
