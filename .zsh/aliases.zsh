@@ -72,9 +72,14 @@ if which pastebinit &>/dev/null; then
   alias out='pastebinit -b http://paste.ubuntu.com -a ademaro'
 fi
 
-if which ack-grep &>/dev/null; then
-  alias grep='ack-grep'
+ 
+if which pydf &>/dev/null; then
+  alias df='pydf'
 fi
+
+#if which ack-grep &>/dev/null; then
+#  alias grep='ack-grep'
+#fi
 
 # Check domains in pix.NS
 alias dns1='dig @ns1.pixelon.ru +short'
