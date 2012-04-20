@@ -49,10 +49,12 @@ alias ssyncr='rsync --rsh=ssh --recursive --verbose --progress'
 alias grab='sudo chown ${USER} --recursive'
 alias grep='grep --color=auto --binary-files=without-match'
 
-alias myip='curl check-host.net/ip'
+alias myip='curl check-host.net/ip' #alt: curl ifconfig.me
 alias whois="whois -h whois-servers.net"
 
 alias memrss='while read command percent rss; do if [[ "${command}" != "COMMAND" ]]; then rss="$(bc <<< "scale=2;${rss}/1024")"; fi; printf "%-26s%-8s%s\n" "${command}" "${percent}" "${rss}"; done < <(ps -A --sort -rss -o comm,pmem,rss | head -n 11)'
+
+alias pwg='pwgen -cnB 8 10 | while read PASS; do echo -n "$PASS\t"; echo -n "$PASS" | md5sum | cut -f1 -d" "; done'
 
 # Git
 alias gst='git status -sb'
