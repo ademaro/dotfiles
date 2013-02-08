@@ -11,10 +11,15 @@ then
   exit
 fi
 
-echo "$(tput setaf 2)Клонирование конфигов Zsh и Vim...$(tput sgr0)"
+if which git &>/dev/null; then
+  echo "$(tput setaf 2)Клонирование конфигов Zsh и Vim...$(tput sgr0)"
 
-/usr/bin/env git clone https://github.com/ademaro/dotfiles.git /tmp/dotfiles
-mv /tmp/dotfiles/.zsh* ~/
-mv /tmp/dotfiles/.vim* ~/
+  /usr/bin/env git clone https://github.com/ademaro/dotfiles.git /tmp/dotfiles
+  mv /tmp/dotfiles/.zsh* ~/
+  mv /tmp/dotfiles/.vim* ~/
 
-rm -rf /tmp/dotfiles
+  rm -rf /tmp/dotfiles
+  echo "$(tput setaf 2)Установка прошла успешно$(tput sgr0)"
+else
+  echo "$(tput setaf 1)git не установлен.$(tput sgr0) Установите, например: apt-get install git для продолжения установки."
+fi
