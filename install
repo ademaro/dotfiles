@@ -11,7 +11,8 @@ then
   exit
 fi
 
-if command -v git &>/dev/null; then
+if [command -v git &>/dev/null]
+then
   echo "$(tput setaf 2)Клонирование конфигов Zsh и Vim...$(tput sgr0)"
 
   /usr/bin/env git clone https://github.com/ademaro/dotfiles.git /tmp/dotfiles
