@@ -11,7 +11,7 @@ then
   exit
 fi
 
-if [command -v git &>/dev/null]
+if command -v git
 then
   echo "$(tput setaf 2)Клонирование конфигов Zsh и Vim...$(tput sgr0)"
 
