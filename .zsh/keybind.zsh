@@ -61,3 +61,6 @@ esac
 bindkey "^E"    end-of-line
 bindkey "^A"    beginning-of-line
 bindkey "^K"    kill-line
+
+bindkey "^P"    forward-word
+bindkey "^O"    backward-word
