@@ -69,6 +69,8 @@ alias gb='git branch'
 alias gco='git checkout'
 alias gd='git diff'
 
+alias mc='mc -S xoria256'
+
 if which pastebinit &>/dev/null; then
   alias out='pastebinit -b http://paste.ubuntu.com -a ademaro'
 fi
