@@ -11,9 +11,9 @@
 Автоматическая установка
 ========================
 
-`wget --no-check-certificate https://github.com/ademaro/dotfiles/raw/master/install -O - | sh`
+`curl -L https://github.com/ademaro/dotfiles/raw/master/install | sh`
 
 Обновление
 ==========
 
-`wget --no-check-certificate https://github.com/ademaro/dotfiles/raw/master/update -O - | sh`
+`curl -L https://github.com/ademaro/dotfiles/raw/master/update | sh`
