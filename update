@@ -2,24 +2,25 @@
 if [ -d ~/.zsh ]
 then
   echo "$(tput setaf 2)Бекапим конфиг zsh.$(tput sgr0)"
-  mv ~/.zsh /tmp
-  mv ~/.zshrc /tmp
+  mv ~/.zsh /tmp/dotfiles.bak
+  mv ~/.zshrc /tmp/dotfiles.bak
   echo "$(tput setaf 2)Готово!$(tput sgr0)"
 fi
 
 if [ -d ~/.vim ]
 then
   echo "$(tput setaf 2)Бекапим конфиг vim.$(tput sgr0)"
-  mv ~/.vim /tmp
-  mv ~/.vimrc /tmp
+  mv ~/.vim /tmp/dotfiles.bak
+  mv ~/.vimrc /tmp/dotfiles.bak
   echo "$(tput setaf 2)Готово!$(tput sgr0)"
 fi
 
-echo "$(tput setaf 2)Клонирование конфигов Zsh и Vim...$(tput sgr0)"
+echo "$(tput setaf 2)Клонирование конфигов Zsh, Vim и Tmux...$(tput sgr0)"
 
 /usr/bin/env git clone https://github.com/ademaro/dotfiles.git /tmp/dotfiles
 mv /tmp/dotfiles/.zsh* ~/
 mv /tmp/dotfiles/.vim* ~/
+mv /tmp/dotfiles/.tmux* ~/
 
 rm -rf /tmp/dotfiles
 echo "$(tput setaf 2)Обновлние произошло успешно!$(tput sgr0)"
