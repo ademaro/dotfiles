@@ -20,6 +20,9 @@ then
   mv /tmp/dotfiles/.vim* ~/
 
   rm -rf /tmp/dotfiles
+  
+  /usr/bin/env git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
   echo "$(tput setaf 2)Установка прошла успешно$(tput sgr0)"
 else
   echo "$(tput setaf 1)git не установлен.$(tput sgr0) Установите, например: apt-get install git для продолжения установки."
