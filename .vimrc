@@ -1,23 +1,23 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
-
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 
 " My Bundles here:
     " Jedi Autocomplit http://habrahabr.ru/post/192610/
-    Bundle 'davidhalter/jedi-vim'
+    "Plugin 'davidhalter/jedi-vim'
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
 " HTML/HAML
     " ZenCoding
-    Bundle 'mattn/emmet-vim'
+    Plugin 'mattn/emmet-vim'
     " HTML5 omnicomplete and syntax
-    "Bundle 'git://github.com/othree/html5.vim.git'
-    Bundle 'git://github.com/hokaccha/vim-html5validator.git'
+    "Plugin 'git://github.com/othree/html5.vim.git'
+    "Plugin 'git://github.com/hokaccha/vim-html5validator.git'
 " CSS/LESS
     " CSS3 syntax support
     Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
@@ -26,8 +26,11 @@ Bundle 'gmarik/Vundle.vim'
     Bundle 'git://github.com/groenewege/vim-less.git'
     Bundle 'git://github.com/miripiruni/vim-better-css-indent.git'
     Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
-                       
-filetype plugin indent on     " required!
+
+call vundle#end()
+
+filetype plugin indent on
+
 "
 " Brief help
 " :BundleList          - list configured bundles
