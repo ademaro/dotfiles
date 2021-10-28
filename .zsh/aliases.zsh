@@ -57,6 +57,8 @@ alias memrss='while read command percent rss; do if [[ "${command}" != "COMMAND"
 
 alias pwg='pwgen -cnB 8 10 | while read PASS; do echo -n "$PASS\t"; echo -n "$PASS" | md5sum | cut -f1 -d" "; done'
 
+alias jails='fail2ban-client status | sed -n "s/,//g;s/.*Jail list://p" | xargs -n1 fail2ban-client status'
+
 # Git
 alias gst='git status -sb'
 alias gil='git log --graph --pretty=format:"%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset" --abbrev-commit --date=relative --color'
